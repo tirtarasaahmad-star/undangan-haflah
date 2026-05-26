@@ -612,6 +612,12 @@ ul {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
+@media {
+    .hero-pesantren {
+        font-size: 1.5rem;
+    }
+}
+
 /* Corner Ornaments */
 .corner-ornament {
     position: absolute;
