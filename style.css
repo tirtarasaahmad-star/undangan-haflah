@@ -804,6 +804,23 @@ ul {
     z-index: 1;
 }
 
+/* Taruh kode ini di bawah .gallery-overlay (Sekitar baris 805) */
+.gallery-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Mengambil pola yang sama persis dengan bagian hero */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><rect x="24" y="24" width="32" height="32" fill="none" stroke="%23d4af37" stroke-width="1.5" /><rect x="24" y="24" width="32" height="32" fill="none" stroke="%23d4af37" stroke-width="1.5" transform="rotate(45 40 40)" /><path d="M40 0 L40 17 M40 63 L40 80 M0 40 L17 40 M63 40 L80 40" stroke="%23d4af37" stroke-width="1.5" /><path d="M0 0 L22 22 M80 0 L58 22 M80 80 L58 58 M0 80 L22 58" stroke="%23d4af37" stroke-width="1.5" /></svg>');
+    background-size: 80px 80px;
+    opacity: 0.15; /* Tingkat kejelasan pola */
+    z-index: 1;
+    pointer-events: none;
+    mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+}
+
 /* Tambahkan ini supaya teks judul & grid foto muncul di atas background gelap */
 .gallery-section .container {
     position: relative;
