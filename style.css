@@ -792,7 +792,7 @@ ul {
     padding: 5rem 0;
 }
 
-.gallery.overlay {
+.gallery-overlay {
     position: absolute;
     top: 0;
     left: 0;
