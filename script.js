@@ -101,3 +101,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update every second
     setInterval(updateCountdown, 1000);
 });
+// --- GALLERY POP-UP LIGHTBOX ---
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("gallery-modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeBtn = document.querySelector(".modal-close");
+    const galleryImages = document.querySelectorAll(".gallery-item img");
+
+    galleryImages.forEach(img => {
+        img.addEventListener("click", function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        });
+    });
+
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
